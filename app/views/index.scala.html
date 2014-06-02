@@ -1,0 +1,35 @@
+@(equation:String,taskForm:Form[Equation])
+
+@import helper._
+
+@main("Square Equation Solving by Nahla ..."){
+   <center> 
+   <font color="red">
+  
+<h1> Square Equation Solving by Nahla Sa3d Al-Deen... </h1>
+<h2> a.x^2 + b.x + c = 0 </h2>
+</font>
+@form(routes.Application.solve()) {
+
+<ul>
+<li>
+the value of a: @inputText(taskForm("a"))
+
+</li>
+<li> 
+the value of b: @inputText(taskForm("b"))
+
+</li>
+<li>
+the value of c: @inputText(taskForm("c"))
+
+</li>
+</ul>
+<br>
+
+<input type="submit" value="Solve">
+}
+<br>
+<h1>@equation</h1>
+</center>
+}
